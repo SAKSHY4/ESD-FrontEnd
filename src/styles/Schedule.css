@@ -1,0 +1,189 @@
+/* Container for the schedule */
+.schedule-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+}
+
+/* Title Styling */
+.schedule-title {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Grid Layout */
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 columns for 5 days */
+  grid-auto-rows: 120px; /* Reduced grid size for time slots */
+  gap: 10px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Day Headers */
+.day-header {
+  background: #007bff;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+
+/* Time Slots */
+.time-slot {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  font-size: 1rem;
+}
+
+/* Empty Slot Styling */
+.time-slot.no-class {
+  background-color: #f2f2f2; /* Light gray for empty slots */
+  color: #888; /* Darker text for empty slots */
+  font-style: italic; /* Italicize text in empty slots */
+}
+
+/* Slot with Class Styling (Darker Background) */
+.time-slot.has-class {
+  background-color: #0dbdbd; /* Slightly darker background for classes */
+  color: #333; /* Darker text for classes */
+}
+
+/* Hover Effect for Time Slots */
+.time-slot:hover {
+  background-color: #eaf3ff; /* Light blue hover effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow on hover */
+}
+
+.time-slot p {
+  margin: 6px 0;
+  color: #555;
+}
+
+/* Container for the course list */
+.courses-container {
+  width: 100%;
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Course Table Title */
+.courses-title {
+  font-size: 2rem;
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Courses Table */
+.courses-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px auto;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Headers */
+.courses-table th {
+  background-color: #007bff;
+  color: white;
+  padding: 14px;
+  text-align: center;
+  font-weight: bold;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+/* Table Data Cells */
+.courses-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Alternating Row Colors */
+.courses-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Hover Effect for Rows */
+.courses-table tbody tr:hover {
+  background-color: #eaf3ff;
+  cursor: pointer;
+}
+
+/* Faculty Link Styling */
+.faculty-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.faculty-link:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+
+.logout-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #ff4d4d; /* Red color */
+  color: white;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #e03e3e; /* Darker red on hover */
+}
+
+.logout-btn:focus {
+  outline: none; /* Remove outline on focus */
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .schedule-grid {
+    grid-template-columns: 1fr; /* Single column for smaller screens */
+  }
+
+  .day-header {
+    font-size: 1.5rem;
+  }
+
+  .time-slot {
+    font-size: 0.9rem;
+  }
+
+  .courses-title {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+  }
+
+  .courses-container {
+    padding: 15px;
+    margin-top: 20px;
+  }
+}
